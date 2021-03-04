@@ -48,3 +48,12 @@ evaluate-commands %sh{
         echo "source '${kak_config}/kakrc'"
     fi
 }
+
+# Indentation stuff I added
+hook global InsertChar \t %{
+  exec -draft -itersel h@
+}
+set global indentwidth 4
+set global tabstop 4
+
+
